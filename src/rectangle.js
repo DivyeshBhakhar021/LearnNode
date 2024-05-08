@@ -1,15 +1,20 @@
-const area = (l,w) => {
-    let ans = l * w;
-
-    console.log("Area of Rectangle",ans);
+const areaOfRectangle = (h, w) => {
+    return h * w
 }
 
-const parimter = (l,w) => {
-    let ans = 2 * (l + w);
-    return ans
+const perimeterOfRectangle = (h, w) => {
+    return 2 * (h + w)
 }
 
-module.exports = {
-    area,
-    parimter
+// module.exports = {
+//     areaOfRectangle,
+//     perimeterOfRectangle
+// }
+
+module.exports = (h, w, callback) => {    
+    if (h <= 0 || w <= 0) {
+        callback(new Error('Lenght is below 0'));
+    } else {
+        callback(null, areaOfRectangle(h, w), perimeterOfRectangle(h, w));
+    }
 }
