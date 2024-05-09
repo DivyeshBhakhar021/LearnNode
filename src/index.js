@@ -14,11 +14,38 @@ const rect = require('./rectangle')
 
 // solveAllProbs(10, 20)
 
-rect(20, 40, (err, area, perimeter) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('Area Of Rectangle', area);
-        console.log('Parameter of Rectangle', perimeter);
-    }
-})
+// rect(20, 40, (err, area, perimeter) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log('Area Of Rectangle', area);
+//         console.log('Parameter of Rectangle', perimeter);
+//     }
+// })
+
+    // rect(3000,(error,data)=>{
+    //     if (error) {
+    //         console.log(error);
+    //     } else {
+    //         console.log('Salary:- ',data);
+    //     }
+    // })
+
+    // rect(8000, (error, bonusAmount) => {
+    //     if (error) {
+    //         console.error("Error occurred:", error);
+    //     } else {
+    //         console.log("Employee bonus amount:", bonusAmount);
+    //     }
+    // });
+
+
+    const salary = require('./bonus')
+
+    salary(100,(error,salaryOBJ)=>{
+        if (error) {
+                console.log(error);
+        } else {
+            console.log("Bouns :-",salaryOBJ);
+        }
+    })
