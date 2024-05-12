@@ -19,3 +19,4 @@ const path1= 'https://www.abc.com/pro/'
 const path2 = '../10'
 
 console.log(url.resolve(path1,path2));
+
